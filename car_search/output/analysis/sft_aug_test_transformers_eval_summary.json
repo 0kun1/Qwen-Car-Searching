@@ -1,0 +1,48 @@
+{
+  "input_file": "output/predictions/sft_aug_test_predictions_transformers.json",
+  "iou_threshold": 0.5,
+  "basic": {
+    "total_images": 500,
+    "total_gt": 542,
+    "total_pred": 528,
+    "error_images": 0
+  },
+  "empty_stats": {
+    "gt_empty_pred_empty": 98,
+    "gt_nonempty_pred_empty": 2,
+    "gt_empty_pred_nonempty": 8,
+    "gt_nonempty_pred_nonempty": 392
+  },
+  "bbox_match": {
+    "matched": 496,
+    "precision": 0.9393939393939394,
+    "recall": 0.915129151291513,
+    "f1": 0.9271028037383178,
+    "avg_iou": 0.8727977745254678
+  },
+  "text_on_matched_bbox": {
+    "correct_text": 443,
+    "wrong_text": 53,
+    "accuracy_on_matched": 0.8931451612903226
+  },
+  "end_to_end": {
+    "tp": 443,
+    "fp": 85,
+    "fn": 99,
+    "precision": 0.8390151515151515,
+    "recall": 0.8173431734317343,
+    "f1": 0.8280373831775701
+  },
+  "error_type_counts": {
+    "漏检": 46,
+    "字符错检": 29,
+    "内容缺失|多余字符": 4,
+    "无中生有": 32,
+    "多余字符": 10,
+    "内容缺失": 5,
+    "字符错检|内容缺失|多余字符": 3,
+    "字符错检|多余字符": 1,
+    "字符错检|内容缺失": 1
+  },
+  "total_errors": 131
+}

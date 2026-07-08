@@ -1,0 +1,72 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+conda/
+ENV/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Secret / environment files
+.env
+.env.*
+*.key
+*.pem
+*.token
+
+# Images
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.gif
+
+# Dataset image folders
+data/train_images/
+data/test_images/
+data/train_images_cut/
+data/train_images_perspective/
+
+# Model weights / checkpoints
+saves/
+pretrained/
+checkpoint-*/
+**/checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# wandb logs
+wandb/
+
+# Large archive files
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Badcase visualization images
+output/badcase_images/
+output/badcase_images_aug/
+output/visualizations/
+
+# Logs that may contain machine paths or private metadata
+*.log
+
+# Optional: environment export files
+conda_lf311_before_vllm.txt
+pip_lf311_before_vllm.txt
+pip_lf311_before_vllm_no_lf.txt

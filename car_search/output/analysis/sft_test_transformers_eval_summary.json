@@ -1,0 +1,47 @@
+{
+  "input_file": "output/predictions/sft_test_predictions_transformers.json",
+  "iou_threshold": 0.5,
+  "basic": {
+    "total_images": 500,
+    "total_gt": 542,
+    "total_pred": 541,
+    "error_images": 0
+  },
+  "empty_stats": {
+    "gt_empty_pred_empty": 98,
+    "gt_nonempty_pred_empty": 5,
+    "gt_empty_pred_nonempty": 8,
+    "gt_nonempty_pred_nonempty": 389
+  },
+  "bbox_match": {
+    "matched": 506,
+    "precision": 0.9353049907578558,
+    "recall": 0.933579335793358,
+    "f1": 0.9344413665743306,
+    "avg_iou": 0.8713158502032999
+  },
+  "text_on_matched_bbox": {
+    "correct_text": 446,
+    "wrong_text": 60,
+    "accuracy_on_matched": 0.8814229249011858
+  },
+  "end_to_end": {
+    "tp": 446,
+    "fp": 95,
+    "fn": 96,
+    "precision": 0.8243992606284658,
+    "recall": 0.8228782287822878,
+    "f1": 0.8236380424746075
+  },
+  "error_type_counts": {
+    "字符错检": 33,
+    "内容缺失|多余字符": 6,
+    "内容缺失": 8,
+    "漏检": 36,
+    "无中生有": 35,
+    "多余字符": 10,
+    "字符错检|内容缺失|多余字符": 2,
+    "字符错检|多余字符": 1
+  },
+  "total_errors": 131
+}

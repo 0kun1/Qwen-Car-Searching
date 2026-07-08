@@ -1,0 +1,5308 @@
+{
+  "summary": {
+    "model_name": "qwen",
+    "file_path": "output/predictions/predictions_qwen.json",
+    "iou_threshold": 0.5,
+    "basic": {
+      "total_images": 500,
+      "total_gt": 550,
+      "total_pred": 676,
+      "inference_error_images": 0,
+      "eval_error_images": 218
+    },
+    "empty_stats": {
+      "gt_nonempty_pred_nonempty": 385,
+      "gt_empty_pred_empty": 98,
+      "gt_nonempty_pred_empty": 14,
+      "gt_empty_pred_nonempty": 3
+    },
+    "bbox_match": {
+      "matched": 483,
+      "precision": 0.7144970414201184,
+      "recall": 0.8781818181818182,
+      "f1": 0.7879282218597063,
+      "avg_iou": 0.8091818011328514
+    },
+    "text_on_matched_bbox": {
+      "correct_text": 385,
+      "wrong_text": 98,
+      "accuracy_on_matched": 0.7971014492753623
+    },
+    "end_to_end": {
+      "tp": 385,
+      "fp": 291,
+      "fn": 165,
+      "precision": 0.5695266272189349,
+      "recall": 0.7,
+      "f1": 0.6280587275693311
+    },
+    "error_type_counts": {
+      "内容缺失": 53,
+      "字符错检|内容缺失|多余字符": 6,
+      "无中生有": 193,
+      "漏检": 67,
+      "字符错检": 26,
+      "多余字符": 7,
+      "内容缺失|多余字符": 6
+    },
+    "total_errors": 358
+  },
+  "errors_by_image": {
+    "test_0003.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-034A",
+        "pred": "034A",
+        "iou": 0.6699724517906336,
+        "gt_bbox": [
+          407,
+          745,
+          697,
+          1000
+        ],
+        "pred_bbox": [
+          454,
+          735,
+          682,
+          969
+        ]
+      }
+    ],
+    "test_0005.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-160",
+        "pred": "160",
+        "iou": 0.7540116279069767,
+        "gt_bbox": [
+          600,
+          627,
+          815,
+          787
+        ],
+        "pred_bbox": [
+          610,
+          630,
+          808,
+          761
+        ]
+      }
+    ],
+    "test_0010.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检|内容缺失|多余字符",
+        "details": "字符替换: 8->3; 缺失字符: 8; 多余字符: 3",
+        "gt": "688",
+        "pred": "633",
+        "iou": 0.8912256816308982,
+        "gt_bbox": [
+          565,
+          864,
+          766,
+          989
+        ],
+        "pred_bbox": [
+          565,
+          850,
+          764,
+          989
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0688",
+        "pred_bbox": [
+          471,
+          292,
+          498,
+          330
+        ]
+      }
+    ],
+    "test_0014.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "-21107",
+        "gt_bbox": [
+          206,
+          765,
+          391,
+          885
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "27101",
+        "pred_bbox": [
+          208,
+          720,
+          454,
+          873
+        ]
+      }
+    ],
+    "test_0015.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3172",
+        "pred_bbox": [
+          554,
+          85,
+          572,
+          106
+        ]
+      }
+    ],
+    "test_0016.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 6->G",
+        "gt": "16120",
+        "pred": "1G120",
+        "iou": 0.7583280955373979,
+        "gt_bbox": [
+          382,
+          716,
+          515,
+          783
+        ],
+        "pred_bbox": [
+          382,
+          726,
+          509,
+          788
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "冀A00DG",
+        "pred_bbox": [
+          49,
+          332,
+          71,
+          372
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "冀AK07GT",
+        "pred_bbox": [
+          202,
+          300,
+          236,
+          357
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "冀AxxHG8",
+        "pred_bbox": [
+          386,
+          250,
+          433,
+          311
+        ]
+      }
+    ],
+    "test_0017.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "多余字符",
+        "details": "多余字符: 0",
+        "gt": "2-84",
+        "pred": "2-084",
+        "iou": 0.9518294287970519,
+        "gt_bbox": [
+          476,
+          726,
+          674,
+          839
+        ],
+        "pred_bbox": [
+          474,
+          725,
+          668,
+          839
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "多余字符",
+        "details": "多余字符: 0",
+        "gt": "2-85",
+        "pred": "2-085",
+        "iou": 0.900709219858156,
+        "gt_bbox": [
+          775,
+          641,
+          905,
+          708
+        ],
+        "pred_bbox": [
+          768,
+          640,
+          902,
+          709
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2-085",
+        "pred_bbox": [
+          832,
+          19,
+          874,
+          59
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3",
+        "pred_bbox": [
+          147,
+          908,
+          212,
+          994
+        ]
+      }
+    ],
+    "test_0020.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失|多余字符",
+        "details": "缺失字符: 8; 多余字符: 0",
+        "gt": "5-88",
+        "pred": "5-08",
+        "iou": 0.5801573641504795,
+        "gt_bbox": [
+          404,
+          570,
+          653,
+          766
+        ],
+        "pred_bbox": [
+          445,
+          600,
+          643,
+          743
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "5",
+        "pred_bbox": [
+          508,
+          26,
+          548,
+          185
+        ]
+      }
+    ],
+    "test_0033.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3",
+        "pred_bbox": [
+          545,
+          216,
+          560,
+          249
+        ]
+      }
+    ],
+    "test_0036.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检|内容缺失|多余字符",
+        "details": "字符替换: 9->3; 缺失字符: 40; 多余字符: 25",
+        "gt": "409",
+        "pred": "325",
+        "iou": 0.7324104648209296,
+        "gt_bbox": [
+          705,
+          658,
+          792,
+          731
+        ],
+        "pred_bbox": [
+          694,
+          652,
+          784,
+          733
+        ]
+      }
+    ],
+    "test_0037.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1907",
+        "pred": "1907",
+        "iou": 0.9491740787801779,
+        "gt_bbox": [
+          136,
+          548,
+          385,
+          757
+        ],
+        "pred_bbox": [
+          132,
+          550,
+          387,
+          761
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1906",
+        "pred": "1906",
+        "iou": 0.8552338530066815,
+        "gt_bbox": [
+          0,
+          368,
+          98,
+          476
+        ],
+        "pred_bbox": [
+          2,
+          372,
+          100,
+          468
+        ]
+      }
+    ],
+    "test_0038.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-1051",
+        "gt_bbox": [
+          450,
+          727,
+          621,
+          764
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-1052",
+        "gt_bbox": [
+          825,
+          731,
+          1000,
+          770
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-1051",
+        "pred_bbox": [
+          446,
+          682,
+          619,
+          719
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-1052",
+        "pred_bbox": [
+          819,
+          683,
+          997,
+          721
+        ]
+      }
+    ],
+    "test_0039.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1946",
+        "pred": "1946",
+        "iou": 0.8797303752454753,
+        "gt_bbox": [
+          416,
+          615,
+          637,
+          765
+        ],
+        "pred_bbox": [
+          413,
+          602,
+          640,
+          768
+        ]
+      }
+    ],
+    "test_0041.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-161",
+        "pred": "161",
+        "iou": 0.7630522088353414,
+        "gt_bbox": [
+          297,
+          700,
+          483,
+          859
+        ],
+        "pred_bbox": [
+          300,
+          690,
+          480,
+          833
+        ]
+      }
+    ],
+    "test_0043.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0300",
+        "pred_bbox": [
+          266,
+          0,
+          304,
+          30
+        ]
+      }
+    ],
+    "test_0044.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-2A 0-230",
+        "pred_bbox": [
+          196,
+          322,
+          243,
+          348
+        ]
+      }
+    ],
+    "test_0045.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "G195",
+        "pred_bbox": [
+          610,
+          461,
+          717,
+          631
+        ]
+      }
+    ],
+    "test_0046.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "翼A2D*22",
+        "pred_bbox": [
+          858,
+          48,
+          999,
+          193
+        ]
+      }
+    ],
+    "test_0047.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1-1072",
+        "pred_bbox": [
+          131,
+          581,
+          208,
+          640
+        ]
+      }
+    ],
+    "test_0050.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2245",
+        "pred_bbox": [
+          778,
+          641,
+          838,
+          685
+        ]
+      }
+    ],
+    "test_0051.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2659",
+        "pred": "2659",
+        "iou": 0.8466720779220779,
+        "gt_bbox": [
+          487,
+          555,
+          663,
+          625
+        ],
+        "pred_bbox": [
+          488,
+          558,
+          659,
+          619
+        ]
+      }
+    ],
+    "test_0052.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "26",
+        "pred_bbox": [
+          602,
+          14,
+          649,
+          105
+        ]
+      }
+    ],
+    "test_0054.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K",
+        "pred_bbox": [
+          579,
+          338,
+          590,
+          366
+        ]
+      }
+    ],
+    "test_0058.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K2",
+        "pred_bbox": [
+          857,
+          417,
+          886,
+          531
+        ]
+      }
+    ],
+    "test_0060.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -1",
+        "gt": "-11154",
+        "pred": "1154",
+        "iou": 0.8706935123042505,
+        "gt_bbox": [
+          191,
+          605,
+          489,
+          800
+        ],
+        "pred_bbox": [
+          202,
+          613,
+          480,
+          795
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "133",
+        "pred_bbox": [
+          2,
+          512,
+          127,
+          593
+        ]
+      }
+    ],
+    "test_0064.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 2->P",
+        "gt": "24076",
+        "pred": "P4076",
+        "iou": 0.8163094740612501,
+        "gt_bbox": [
+          556,
+          493,
+          716,
+          579
+        ],
+        "pred_bbox": [
+          550,
+          478,
+          715,
+          579
+        ]
+      }
+    ],
+    "test_0066.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2346",
+        "pred": "2346",
+        "iou": 0.9160173543474411,
+        "gt_bbox": [
+          198,
+          877,
+          371,
+          1000
+        ],
+        "pred_bbox": [
+          193,
+          873,
+          369,
+          998
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "31",
+        "pred_bbox": [
+          352,
+          388,
+          369,
+          423
+        ]
+      }
+    ],
+    "test_0067.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-11163",
+        "pred_bbox": [
+          919,
+          537,
+          994,
+          615
+        ]
+      }
+    ],
+    "test_0068.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -2",
+        "gt": "-232",
+        "pred": "23",
+        "iou": 0.930952380952381,
+        "gt_bbox": [
+          575,
+          860,
+          719,
+          1000
+        ],
+        "pred_bbox": [
+          577,
+          861,
+          713,
+          999
+        ]
+      }
+    ],
+    "test_0069.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-2172",
+        "gt_bbox": [
+          22,
+          771,
+          159,
+          859
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-2172",
+        "pred_bbox": [
+          3,
+          733,
+          212,
+          890
+        ]
+      }
+    ],
+    "test_0073.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "多余字符",
+        "details": "多余字符: 0",
+        "gt": "-2242",
+        "pred": "0-2242",
+        "iou": 0.8213765718067505,
+        "gt_bbox": [
+          0,
+          785,
+          221,
+          851
+        ],
+        "pred_bbox": [
+          24,
+          788,
+          223,
+          853
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-224",
+        "gt_bbox": [
+          416,
+          739,
+          656,
+          806
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-224",
+        "pred_bbox": [
+          814,
+          690,
+          990,
+          755
+        ]
+      }
+    ],
+    "test_0076.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-2129",
+        "pred_bbox": [
+          760,
+          536,
+          819,
+          608
+        ]
+      }
+    ],
+    "test_0077.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "T096",
+        "pred_bbox": [
+          736,
+          146,
+          763,
+          168
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "204",
+        "pred_bbox": [
+          688,
+          228,
+          705,
+          246
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "D",
+        "pred_bbox": [
+          792,
+          254,
+          810,
+          288
+        ]
+      }
+    ],
+    "test_0078.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: 4",
+        "gt": "商业-43",
+        "pred": "商业-3",
+        "iou": 0.8742397137745975,
+        "gt_bbox": [
+          644,
+          665,
+          754,
+          853
+        ],
+        "pred_bbox": [
+          636,
+          663,
+          752,
+          846
+        ]
+      }
+    ],
+    "test_0079.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2239",
+        "pred": "2239",
+        "iou": 0.8613244296048971,
+        "gt_bbox": [
+          399,
+          890,
+          508,
+          964
+        ],
+        "pred_bbox": [
+          397,
+          883,
+          508,
+          961
+        ]
+      }
+    ],
+    "test_0080.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-269",
+        "pred": "269",
+        "iou": 0.7535156919910821,
+        "gt_bbox": [
+          185,
+          635,
+          370,
+          730
+        ],
+        "pred_bbox": [
+          176,
+          623,
+          372,
+          742
+        ]
+      }
+    ],
+    "test_0083.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->C",
+        "gt": "032",
+        "pred": "C32",
+        "iou": 0.6092451892352482,
+        "gt_bbox": [
+          551,
+          706,
+          778,
+          838
+        ],
+        "pred_bbox": [
+          564,
+          689,
+          759,
+          884
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "031",
+        "gt_bbox": [
+          891,
+          581,
+          1000,
+          659
+        ]
+      }
+    ],
+    "test_0084.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0006",
+        "gt_bbox": [
+          130,
+          584,
+          258,
+          606
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0004",
+        "gt_bbox": [
+          719,
+          583,
+          849,
+          605
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0006",
+        "pred_bbox": [
+          243,
+          173,
+          281,
+          208
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0004",
+        "pred_bbox": [
+          713,
+          165,
+          752,
+          196
+        ]
+      }
+    ],
+    "test_0085.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "95",
+        "pred_bbox": [
+          0,
+          846,
+          118,
+          965
+        ]
+      }
+    ],
+    "test_0087.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "22",
+        "pred_bbox": [
+          862,
+          871,
+          987,
+          962
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2204",
+        "pred_bbox": [
+          165,
+          24,
+          223,
+          125
+        ]
+      }
+    ],
+    "test_0089.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "6",
+        "pred_bbox": [
+          108,
+          8,
+          179,
+          295
+        ]
+      }
+    ],
+    "test_0090.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失|多余字符",
+        "details": "缺失字符: 12; 多余字符: 7",
+        "gt": "1612",
+        "pred": "167",
+        "iou": 0.5372470064639187,
+        "gt_bbox": [
+          734,
+          831,
+          999,
+          1000
+        ],
+        "pred_bbox": [
+          718,
+          838,
+          903,
+          988
+        ]
+      }
+    ],
+    "test_0091.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "H143",
+        "gt_bbox": [
+          758,
+          694,
+          818,
+          766
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "H143",
+        "pred_bbox": [
+          735,
+          681,
+          819,
+          789
+        ]
+      }
+    ],
+    "test_0094.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-1189",
+        "pred_bbox": [
+          604,
+          481,
+          684,
+          530
+        ]
+      }
+    ],
+    "test_0097.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K008",
+        "gt_bbox": [
+          215,
+          705,
+          470,
+          837
+        ]
+      }
+    ],
+    "test_0098.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-2262",
+        "gt_bbox": [
+          10,
+          826,
+          353,
+          908
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2262",
+        "pred_bbox": [
+          139,
+          818,
+          342,
+          882
+        ]
+      }
+    ],
+    "test_0099.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          232,
+          43,
+          256,
+          102
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          486,
+          160,
+          540,
+          309
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          680,
+          133,
+          703,
+          194
+        ]
+      }
+    ],
+    "test_0101.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: 2",
+        "gt": "-2263",
+        "pred": "-263",
+        "iou": 0.9562841530054644,
+        "gt_bbox": [
+          577,
+          739,
+          756,
+          857
+        ],
+        "pred_bbox": [
+          573,
+          739,
+          752,
+          857
+        ]
+      }
+    ],
+    "test_0102.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0811",
+        "gt_bbox": [
+          104,
+          241,
+          129,
+          269
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0810",
+        "gt_bbox": [
+          412,
+          344,
+          429,
+          362
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0811",
+        "pred_bbox": [
+          96,
+          229,
+          160,
+          302
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0810",
+        "pred_bbox": [
+          405,
+          325,
+          434,
+          374
+        ]
+      }
+    ],
+    "test_0106.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: 1",
+        "gt": "1389",
+        "pred": "389",
+        "iou": 0.7889967637540453,
+        "gt_bbox": [
+          212,
+          543,
+          321,
+          589
+        ],
+        "pred_bbox": [
+          204,
+          538,
+          318,
+          591
+        ]
+      }
+    ],
+    "test_0109.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "5A",
+        "pred_bbox": [
+          75,
+          813,
+          322,
+          999
+        ]
+      }
+    ],
+    "test_0111.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "4",
+        "pred_bbox": [
+          504,
+          289,
+          551,
+          463
+        ]
+      }
+    ],
+    "test_0117.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "203",
+        "pred_bbox": [
+          869,
+          96,
+          886,
+          116
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "204",
+        "pred_bbox": [
+          961,
+          85,
+          981,
+          104
+        ]
+      }
+    ],
+    "test_0120.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "A217",
+        "gt_bbox": [
+          476,
+          661,
+          551,
+          722
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A217",
+        "pred_bbox": [
+          452,
+          645,
+          574,
+          752
+        ]
+      }
+    ],
+    "test_0121.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "10",
+        "pred_bbox": [
+          925,
+          294,
+          947,
+          332
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "10C",
+        "pred_bbox": [
+          952,
+          296,
+          968,
+          333
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          753,
+          183,
+          767,
+          216
+        ]
+      }
+    ],
+    "test_0122.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A225",
+        "pred_bbox": [
+          682,
+          538,
+          728,
+          579
+        ]
+      }
+    ],
+    "test_0124.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "-2148",
+        "gt_bbox": [
+          65,
+          755,
+          224,
+          854
+        ]
+      }
+    ],
+    "test_0129.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1429",
+        "pred": "1429",
+        "iou": 0.8446507083536883,
+        "gt_bbox": [
+          618,
+          506,
+          866,
+          695
+        ],
+        "pred_bbox": [
+          610,
+          492,
+          865,
+          708
+        ]
+      }
+    ],
+    "test_0130.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "12#",
+        "pred_bbox": [
+          389,
+          126,
+          410,
+          154
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          112,
+          128,
+          129,
+          156
+        ]
+      }
+    ],
+    "test_0134.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "D041",
+        "gt_bbox": [
+          438,
+          760,
+          515,
+          798
+        ]
+      }
+    ],
+    "test_0135.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-1113",
+        "gt_bbox": [
+          387,
+          691,
+          548,
+          789
+        ]
+      }
+    ],
+    "test_0136.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B区",
+        "pred_bbox": [
+          599,
+          256,
+          638,
+          317
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          298,
+          284,
+          313,
+          323
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          367,
+          309,
+          377,
+          334
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          380,
+          306,
+          391,
+          336
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          551,
+          296,
+          562,
+          328
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B区",
+        "pred_bbox": [
+          796,
+          271,
+          826,
+          316
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          828,
+          275,
+          838,
+          319
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B区",
+        "pred_bbox": [
+          891,
+          282,
+          914,
+          323
+        ]
+      }
+    ],
+    "test_0137.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0122",
+        "gt_bbox": [
+          871,
+          74,
+          895,
+          93
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0122",
+        "pred_bbox": [
+          858,
+          60,
+          897,
+          102
+        ]
+      }
+    ],
+    "test_0142.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K173",
+        "gt_bbox": [
+          158,
+          658,
+          297,
+          734
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K174",
+        "gt_bbox": [
+          333,
+          756,
+          574,
+          920
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K173",
+        "pred_bbox": [
+          103,
+          636,
+          344,
+          816
+        ]
+      }
+    ],
+    "test_0146.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2502",
+        "pred_bbox": [
+          660,
+          280,
+          709,
+          346
+        ]
+      }
+    ],
+    "test_0148.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0655",
+        "gt_bbox": [
+          360,
+          643,
+          585,
+          694
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0655",
+        "pred_bbox": [
+          441,
+          642,
+          536,
+          689
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "06",
+        "pred_bbox": [
+          648,
+          691,
+          708,
+          738
+        ]
+      }
+    ],
+    "test_0151.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2265",
+        "pred": "2265",
+        "iou": 0.8560752169720347,
+        "gt_bbox": [
+          315,
+          681,
+          449,
+          734
+        ],
+        "pred_bbox": [
+          313,
+          673,
+          449,
+          734
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2266",
+        "pred": "2266",
+        "iou": 0.840929808568824,
+        "gt_bbox": [
+          544,
+          742,
+          738,
+          826
+        ],
+        "pred_bbox": [
+          542,
+          736,
+          724,
+          824
+        ]
+      }
+    ],
+    "test_0156.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-117",
+        "pred_bbox": [
+          277,
+          876,
+          456,
+          999
+        ]
+      }
+    ],
+    "test_0159.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "B091",
+        "gt_bbox": [
+          734,
+          550,
+          811,
+          601
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B091",
+        "pred_bbox": [
+          719,
+          488,
+          866,
+          607
+        ]
+      }
+    ],
+    "test_0160.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-221",
+        "pred": "221",
+        "iou": 0.8104333080458744,
+        "gt_bbox": [
+          281,
+          779,
+          423,
+          924
+        ],
+        "pred_bbox": [
+          273,
+          781,
+          408,
+          929
+        ]
+      }
+    ],
+    "test_0161.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-1C126",
+        "pred_bbox": [
+          630,
+          288,
+          698,
+          328
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-1C127",
+        "pred_bbox": [
+          674,
+          254,
+          716,
+          282
+        ]
+      }
+    ],
+    "test_0163.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K003",
+        "gt_bbox": [
+          696,
+          719,
+          797,
+          776
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K003",
+        "pred_bbox": [
+          668,
+          707,
+          790,
+          842
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K",
+        "pred_bbox": [
+          744,
+          318,
+          790,
+          402
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1道",
+        "pred_bbox": [
+          769,
+          415,
+          804,
+          461
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K",
+        "pred_bbox": [
+          902,
+          386,
+          927,
+          437
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1",
+        "pred_bbox": [
+          919,
+          442,
+          935,
+          469
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K",
+        "pred_bbox": [
+          960,
+          413,
+          978,
+          450
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1",
+        "pred_bbox": [
+          972,
+          454,
+          982,
+          473
+        ]
+      }
+    ],
+    "test_0164.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "025",
+        "pred_bbox": [
+          254,
+          907,
+          354,
+          999
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-2028",
+        "pred_bbox": [
+          596,
+          560,
+          635,
+          604
+        ]
+      }
+    ],
+    "test_0165.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失|多余字符",
+        "details": "缺失字符: -195; 多余字符: B0",
+        "gt": "-1952",
+        "pred": "B02",
+        "iou": 0.7045009784735812,
+        "gt_bbox": [
+          590,
+          449,
+          699,
+          521
+        ],
+        "pred_bbox": [
+          604,
+          434,
+          694,
+          521
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B03",
+        "pred_bbox": [
+          701,
+          361,
+          775,
+          406
+        ]
+      }
+    ],
+    "test_0166.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0541",
+        "pred_bbox": [
+          196,
+          0,
+          254,
+          51
+        ]
+      }
+    ],
+    "test_0168.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->D, 6->C",
+        "gt": "0-1463",
+        "pred": "D-14C3",
+        "iou": 0.8835098335854765,
+        "gt_bbox": [
+          0,
+          722,
+          150,
+          763
+        ],
+        "pred_bbox": [
+          4,
+          723,
+          154,
+          765
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K",
+        "pred_bbox": [
+          561,
+          430,
+          572,
+          458
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K",
+        "pred_bbox": [
+          797,
+          409,
+          807,
+          433
+        ]
+      }
+    ],
+    "test_0169.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -4",
+        "gt": "-2249",
+        "pred": "229",
+        "iou": 0.8711045655375552,
+        "gt_bbox": [
+          266,
+          748,
+          427,
+          841
+        ],
+        "pred_bbox": [
+          262,
+          738,
+          425,
+          841
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "00",
+        "pred_bbox": [
+          0,
+          891,
+          112,
+          999
+        ]
+      }
+    ],
+    "test_0170.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "冀A 8*665",
+        "pred_bbox": [
+          586,
+          44,
+          658,
+          154
+        ]
+      }
+    ],
+    "test_0171.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->O",
+        "gt": "0-2237",
+        "pred": "O-2237",
+        "iou": 0.7168156239655743,
+        "gt_bbox": [
+          533,
+          735,
+          606,
+          796
+        ],
+        "pred_bbox": [
+          535,
+          722,
+          609,
+          802
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-2236",
+        "gt_bbox": [
+          375,
+          832,
+          510,
+          947
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "C-2236",
+        "pred_bbox": [
+          373,
+          722,
+          606,
+          961
+        ]
+      }
+    ],
+    "test_0173.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B01",
+        "pred_bbox": [
+          936,
+          761,
+          994,
+          804
+        ]
+      }
+    ],
+    "test_0179.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检|内容缺失|多余字符",
+        "details": "字符替换: 4->B; 缺失字符: 2; 多余字符: 1",
+        "gt": "24026",
+        "pred": "B1026",
+        "iou": 0.7786006232042411,
+        "gt_bbox": [
+          393,
+          493,
+          689,
+          651
+        ],
+        "pred_bbox": [
+          378,
+          492,
+          692,
+          623
+        ]
+      }
+    ],
+    "test_0180.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: 113",
+        "gt": "1132055",
+        "pred": "2055",
+        "iou": 0.8978326885477765,
+        "gt_bbox": [
+          227,
+          698,
+          424,
+          813
+        ],
+        "pred_bbox": [
+          225,
+          700,
+          418,
+          819
+        ]
+      }
+    ],
+    "test_0181.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "BO",
+        "pred_bbox": [
+          652,
+          852,
+          844,
+          999
+        ]
+      }
+    ],
+    "test_0182.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0151",
+        "gt_bbox": [
+          730,
+          72,
+          760,
+          111
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0151",
+        "pred_bbox": [
+          719,
+          51,
+          763,
+          114
+        ]
+      }
+    ],
+    "test_0183.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1C308",
+        "pred": "1C308",
+        "iou": 0.9081625314635023,
+        "gt_bbox": [
+          492,
+          494,
+          852,
+          803
+        ],
+        "pred_bbox": [
+          494,
+          506,
+          846,
+          793
+        ]
+      }
+    ],
+    "test_0184.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2157",
+        "pred_bbox": [
+          384,
+          481,
+          442,
+          516
+        ]
+      }
+    ],
+    "test_0186.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1-039",
+        "pred_bbox": [
+          382,
+          0,
+          433,
+          40
+        ]
+      }
+    ],
+    "test_0187.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "812-823",
+        "pred_bbox": [
+          1,
+          165,
+          132,
+          287
+        ]
+      }
+    ],
+    "test_0193.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "35",
+        "pred_bbox": [
+          2,
+          669,
+          78,
+          731
+        ]
+      }
+    ],
+    "test_0195.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K",
+        "pred_bbox": [
+          624,
+          327,
+          644,
+          365
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "4",
+        "pred_bbox": [
+          629,
+          369,
+          640,
+          392
+        ]
+      }
+    ],
+    "test_0199.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2332",
+        "pred": "2332",
+        "iou": 0.83984518982676,
+        "gt_bbox": [
+          688,
+          828,
+          837,
+          894
+        ],
+        "pred_bbox": [
+          686,
+          822,
+          835,
+          890
+        ]
+      }
+    ],
+    "test_0201.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检|内容缺失|多余字符",
+        "details": "字符替换: 0->5; 缺失字符: 6; 多余字符: 8",
+        "gt": "E060",
+        "pred": "E058",
+        "iou": 0.6986282515942561,
+        "gt_bbox": [
+          191,
+          725,
+          383,
+          806
+        ],
+        "pred_bbox": [
+          182,
+          713,
+          379,
+          822
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 8->9",
+        "gt": "E058",
+        "pred": "E059",
+        "iou": 0.5330769230769231,
+        "gt_bbox": [
+          603,
+          601,
+          687,
+          634
+        ],
+        "pred_bbox": [
+          594,
+          588,
+          694,
+          640
+        ]
+      }
+    ],
+    "test_0206.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3-033",
+        "pred_bbox": [
+          283,
+          137,
+          314,
+          187
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3-34",
+        "pred_bbox": [
+          117,
+          219,
+          145,
+          260
+        ]
+      }
+    ],
+    "test_0208.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0510-0522",
+        "pred_bbox": [
+          918,
+          20,
+          993,
+          63
+        ]
+      }
+    ],
+    "test_0213.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K03",
+        "gt_bbox": [
+          343,
+          595,
+          636,
+          656
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K03",
+        "pred_bbox": [
+          789,
+          590,
+          999,
+          656
+        ]
+      }
+    ],
+    "test_0215.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "1-51",
+        "pred": "151",
+        "iou": 0.7527652601392871,
+        "gt_bbox": [
+          390,
+          764,
+          638,
+          921
+        ],
+        "pred_bbox": [
+          393,
+          799,
+          639,
+          919
+        ]
+      }
+    ],
+    "test_0216.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K224",
+        "gt_bbox": [
+          262,
+          743,
+          469,
+          888
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K224",
+        "pred_bbox": [
+          186,
+          680,
+          463,
+          893
+        ]
+      }
+    ],
+    "test_0217.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 3->B",
+        "gt": "32007",
+        "pred": "B2007",
+        "iou": 0.8581745827038579,
+        "gt_bbox": [
+          257,
+          862,
+          427,
+          1000
+        ],
+        "pred_bbox": [
+          252,
+          850,
+          433,
+          999
+        ]
+      }
+    ],
+    "test_0218.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-11035",
+        "pred": "11035",
+        "iou": 0.9249566476287446,
+        "gt_bbox": [
+          467,
+          569,
+          780,
+          762
+        ],
+        "pred_bbox": [
+          472,
+          561,
+          778,
+          759
+        ]
+      }
+    ],
+    "test_0225.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "52",
+        "gt_bbox": [
+          24,
+          921,
+          169,
+          1000
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1-053",
+        "pred_bbox": [
+          440,
+          148,
+          483,
+          215
+        ]
+      }
+    ],
+    "test_0227.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          632,
+          88,
+          679,
+          258
+        ]
+      }
+    ],
+    "test_0228.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-118",
+        "gt_bbox": [
+          308,
+          718,
+          455,
+          808
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0-119",
+        "gt_bbox": [
+          529,
+          635,
+          613,
+          675
+        ]
+      }
+    ],
+    "test_0229.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 2->3",
+        "gt": "2491",
+        "pred": "3491",
+        "iou": 0.8872843450479233,
+        "gt_bbox": [
+          235,
+          811,
+          370,
+          867
+        ],
+        "pred_bbox": [
+          230,
+          813,
+          366,
+          866
+        ]
+      }
+    ],
+    "test_0231.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "400-426",
+        "pred_bbox": [
+          396,
+          165,
+          533,
+          255
+        ]
+      }
+    ],
+    "test_0232.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "6-97",
+        "gt_bbox": [
+          404,
+          775,
+          616,
+          877
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "6",
+        "pred_bbox": [
+          514,
+          232,
+          597,
+          496
+        ]
+      }
+    ],
+    "test_0237.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1162",
+        "pred": "1162",
+        "iou": 0.8606293538313716,
+        "gt_bbox": [
+          245,
+          600,
+          426,
+          715
+        ],
+        "pred_bbox": [
+          250,
+          602,
+          419,
+          708
+        ]
+      }
+    ],
+    "test_0242.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K162",
+        "gt_bbox": [
+          652,
+          495,
+          789,
+          599
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K163",
+        "gt_bbox": [
+          801,
+          391,
+          897,
+          455
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K162",
+        "pred_bbox": [
+          669,
+          390,
+          887,
+          594
+        ]
+      }
+    ],
+    "test_0243.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 4->1",
+        "gt": "1634",
+        "pred": "1631",
+        "iou": 0.7668414052108599,
+        "gt_bbox": [
+          436,
+          550,
+          641,
+          666
+        ],
+        "pred_bbox": [
+          443,
+          562,
+          659,
+          661
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1634",
+        "pred_bbox": [
+          662,
+          47,
+          714,
+          108
+        ]
+      }
+    ],
+    "test_0246.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检|内容缺失|多余字符",
+        "details": "字符替换: 1->7; 缺失字符: 8; 多余字符: 3",
+        "gt": "181",
+        "pred": "173",
+        "iou": 0.5816287147819375,
+        "gt_bbox": [
+          837,
+          845,
+          975,
+          933
+        ],
+        "pred_bbox": [
+          802,
+          814,
+          974,
+          934
+        ]
+      }
+    ],
+    "test_0249.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 3->8",
+        "gt": "H231",
+        "pred": "H281",
+        "iou": 0.7149148999701403,
+        "gt_bbox": [
+          513,
+          806,
+          670,
+          989
+        ],
+        "pred_bbox": [
+          508,
+          792,
+          705,
+          996
+        ]
+      }
+    ],
+    "test_0251.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2860",
+        "pred": "2860",
+        "iou": 0.801043219076006,
+        "gt_bbox": [
+          699,
+          670,
+          923,
+          757
+        ],
+        "pred_bbox": [
+          696,
+          662,
+          914,
+          750
+        ]
+      }
+    ],
+    "test_0252.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "4-075",
+        "pred_bbox": [
+          163,
+          27,
+          235,
+          109
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "4-073",
+        "pred_bbox": [
+          885,
+          179,
+          916,
+          228
+        ]
+      }
+    ],
+    "test_0254.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1222",
+        "pred": "1222",
+        "iou": 0.8704454127740382,
+        "gt_bbox": [
+          79,
+          669,
+          358,
+          868
+        ],
+        "pred_bbox": [
+          86,
+          656,
+          352,
+          862
+        ]
+      }
+    ],
+    "test_0256.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A",
+        "pred_bbox": [
+          225,
+          135,
+          262,
+          238
+        ]
+      }
+    ],
+    "test_0257.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0449",
+        "gt_bbox": [
+          210,
+          738,
+          341,
+          864
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0449",
+        "pred_bbox": [
+          520,
+          38,
+          559,
+          106
+        ]
+      }
+    ],
+    "test_0259.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          214,
+          58,
+          246,
+          101
+        ]
+      }
+    ],
+    "test_0262.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2224",
+        "pred": "2224",
+        "iou": 0.8438108911906471,
+        "gt_bbox": [
+          451,
+          561,
+          577,
+          631
+        ],
+        "pred_bbox": [
+          443,
+          558,
+          572,
+          629
+        ]
+      }
+    ],
+    "test_0263.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "4",
+        "pred_bbox": [
+          363,
+          221,
+          395,
+          333
+        ]
+      }
+    ],
+    "test_0264.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 6->8",
+        "gt": "060",
+        "pred": "080",
+        "iou": 0.7165775401069518,
+        "gt_bbox": [
+          266,
+          696,
+          346,
+          763
+        ],
+        "pred_bbox": [
+          258,
+          686,
+          346,
+          771
+        ]
+      }
+    ],
+    "test_0268.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "D009",
+        "pred_bbox": [
+          672,
+          460,
+          810,
+          545
+        ]
+      }
+    ],
+    "test_0269.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2205",
+        "pred": "2205",
+        "iou": 0.8729487396379632,
+        "gt_bbox": [
+          288,
+          797,
+          469,
+          890
+        ],
+        "pred_bbox": [
+          288,
+          792,
+          468,
+          883
+        ]
+      }
+    ],
+    "test_0270.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -8",
+        "gt": "-1588",
+        "pred": "158",
+        "iou": 0.8830004076640848,
+        "gt_bbox": [
+          216,
+          641,
+          444,
+          850
+        ],
+        "pred_bbox": [
+          209,
+          632,
+          451,
+          855
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -8",
+        "gt": "-1587",
+        "pred": "157",
+        "iou": 0.8727034120734908,
+        "gt_bbox": [
+          2,
+          434,
+          120,
+          507
+        ],
+        "pred_bbox": [
+          6,
+          430,
+          121,
+          504
+        ]
+      }
+    ],
+    "test_0272.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 9->0",
+        "gt": "293",
+        "pred": "203",
+        "iou": 0.7842364532019704,
+        "gt_bbox": [
+          254,
+          624,
+          454,
+          741
+        ],
+        "pred_bbox": [
+          244,
+          633,
+          453,
+          729
+        ]
+      }
+    ],
+    "test_0273.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检|内容缺失|多余字符",
+        "details": "字符替换: 4->0; 缺失字符: 9; 多余字符: 3",
+        "gt": "194",
+        "pred": "103",
+        "iou": 0.667420814479638,
+        "gt_bbox": [
+          479,
+          746,
+          665,
+          868
+        ],
+        "pred_bbox": [
+          488,
+          768,
+          672,
+          885
+        ]
+      }
+    ],
+    "test_0278.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-2",
+        "pred_bbox": [
+          690,
+          916,
+          804,
+          999
+        ]
+      }
+    ],
+    "test_0279.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "127",
+        "gt_bbox": [
+          542,
+          698,
+          645,
+          760
+        ]
+      }
+    ],
+    "test_0282.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "1064",
+        "gt_bbox": [
+          516,
+          790,
+          729,
+          895
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1064",
+        "pred_bbox": [
+          760,
+          126,
+          822,
+          213
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1063",
+        "pred_bbox": [
+          489,
+          303,
+          525,
+          348
+        ]
+      }
+    ],
+    "test_0283.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "7",
+        "gt_bbox": [
+          804,
+          925,
+          861,
+          1000
+        ]
+      }
+    ],
+    "test_0286.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "8",
+        "pred_bbox": [
+          790,
+          32,
+          816,
+          68
+        ]
+      }
+    ],
+    "test_0287.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "166",
+        "gt_bbox": [
+          452,
+          594,
+          550,
+          667
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A区0 166",
+        "pred_bbox": [
+          435,
+          534,
+          637,
+          676
+        ]
+      }
+    ],
+    "test_0289.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 8->5",
+        "gt": "K038",
+        "pred": "K035",
+        "iou": 0.867314930991217,
+        "gt_bbox": [
+          555,
+          511,
+          796,
+          651
+        ],
+        "pred_bbox": [
+          544,
+          500,
+          792,
+          652
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: K",
+        "gt": "K037",
+        "pred": "037",
+        "iou": 0.7119411431805319,
+        "gt_bbox": [
+          446,
+          449,
+          523,
+          487
+        ],
+        "pred_bbox": [
+          443,
+          442,
+          514,
+          486
+        ]
+      }
+    ],
+    "test_0290.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->6",
+        "gt": "0-1200",
+        "pred": "0-1206",
+        "iou": 0.6889888389138764,
+        "gt_bbox": [
+          329,
+          645,
+          426,
+          689
+        ],
+        "pred_bbox": [
+          320,
+          636,
+          423,
+          693
+        ]
+      }
+    ],
+    "test_0291.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-2941",
+        "pred_bbox": [
+          462,
+          838,
+          516,
+          882
+        ]
+      }
+    ],
+    "test_0292.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "冀A62",
+        "pred_bbox": [
+          930,
+          100,
+          995,
+          202
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "冀A36M1",
+        "pred_bbox": [
+          539,
+          176,
+          602,
+          252
+        ]
+      }
+    ],
+    "test_0294.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "3-70",
+        "gt_bbox": [
+          284,
+          681,
+          441,
+          836
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3-070",
+        "pred_bbox": [
+          380,
+          20,
+          417,
+          95
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3",
+        "pred_bbox": [
+          272,
+          292,
+          297,
+          397
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3",
+        "pred_bbox": [
+          973,
+          338,
+          989,
+          379
+        ]
+      }
+    ],
+    "test_0295.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "A07",
+        "gt_bbox": [
+          113,
+          571,
+          276,
+          676
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A075",
+        "pred_bbox": [
+          481,
+          802,
+          821,
+          999
+        ]
+      }
+    ],
+    "test_0298.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1959",
+        "pred": "1959",
+        "iou": 0.7993766299853698,
+        "gt_bbox": [
+          686,
+          659,
+          908,
+          777
+        ],
+        "pred_bbox": [
+          682,
+          650,
+          899,
+          790
+        ]
+      }
+    ],
+    "test_0302.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1530",
+        "pred": "1530",
+        "iou": 0.9498614958448753,
+        "gt_bbox": [
+          263,
+          415,
+          390,
+          499
+        ],
+        "pred_bbox": [
+          262,
+          415,
+          391,
+          496
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1531",
+        "pred": "1531",
+        "iou": 0.9497443571517645,
+        "gt_bbox": [
+          471,
+          564,
+          709,
+          756
+        ],
+        "pred_bbox": [
+          466,
+          561,
+          709,
+          759
+        ]
+      }
+    ],
+    "test_0304.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "-50",
+        "gt_bbox": [
+          547,
+          725,
+          680,
+          839
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          452,
+          220,
+          498,
+          442
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2-49",
+        "pred_bbox": [
+          879,
+          86,
+          905,
+          153
+        ]
+      }
+    ],
+    "test_0307.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1",
+        "pred_bbox": [
+          838,
+          0,
+          864,
+          42
+        ]
+      }
+    ],
+    "test_0309.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "C-21",
+        "pred_bbox": [
+          807,
+          742,
+          994,
+          884
+        ]
+      }
+    ],
+    "test_0311.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "多余字符",
+        "details": "多余字符: B",
+        "gt": "093",
+        "pred": "B093",
+        "iou": 0.816,
+        "gt_bbox": [
+          0,
+          846,
+          180,
+          954
+        ],
+        "pred_bbox": [
+          2,
+          846,
+          172,
+          972
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "冀A·XX108",
+        "pred_bbox": [
+          458,
+          180,
+          497,
+          253
+        ]
+      }
+    ],
+    "test_0315.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "184",
+        "gt_bbox": [
+          747,
+          551,
+          836,
+          629
+        ]
+      }
+    ],
+    "test_0321.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2242",
+        "pred": "2242",
+        "iou": 0.8693870950353081,
+        "gt_bbox": [
+          201,
+          817,
+          329,
+          952
+        ],
+        "pred_bbox": [
+          192,
+          816,
+          329,
+          943
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "102",
+        "pred_bbox": [
+          686,
+          466,
+          704,
+          492
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "102",
+        "pred_bbox": [
+          705,
+          447,
+          724,
+          475
+        ]
+      }
+    ],
+    "test_0323.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 7->1",
+        "gt": "757",
+        "pred": "751",
+        "iou": 0.5769714562167393,
+        "gt_bbox": [
+          293,
+          658,
+          495,
+          759
+        ],
+        "pred_bbox": [
+          322,
+          656,
+          456,
+          747
+        ]
+      }
+    ],
+    "test_0330.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-2006",
+        "pred_bbox": [
+          721,
+          509,
+          771,
+          571
+        ]
+      }
+    ],
+    "test_0333.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1737",
+        "pred": "1737",
+        "iou": 0.83256918972991,
+        "gt_bbox": [
+          270,
+          615,
+          532,
+          884
+        ],
+        "pred_bbox": [
+          268,
+          611,
+          525,
+          850
+        ]
+      }
+    ],
+    "test_0334.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-223",
+        "pred_bbox": [
+          16,
+          606,
+          145,
+          668
+        ]
+      }
+    ],
+    "test_0338.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "F073",
+        "gt_bbox": [
+          363,
+          461,
+          701,
+          735
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "F072",
+        "gt_bbox": [
+          173,
+          309,
+          341,
+          435
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "F071",
+        "gt_bbox": [
+          78,
+          240,
+          181,
+          298
+        ]
+      }
+    ],
+    "test_0339.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-21055",
+        "pred": "21055",
+        "iou": 0.8666314189412464,
+        "gt_bbox": [
+          451,
+          721,
+          593,
+          814
+        ],
+        "pred_bbox": [
+          446,
+          713,
+          592,
+          816
+        ]
+      }
+    ],
+    "test_0341.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "K167",
+        "gt_bbox": [
+          180,
+          630,
+          263,
+          669
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K167",
+        "pred_bbox": [
+          174,
+          618,
+          255,
+          690
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K169",
+        "pred_bbox": [
+          413,
+          791,
+          578,
+          913
+        ]
+      }
+    ],
+    "test_0343.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->C",
+        "gt": "0-106",
+        "pred": "C-106",
+        "iou": 0.9080675422138836,
+        "gt_bbox": [
+          277,
+          769,
+          453,
+          894
+        ],
+        "pred_bbox": [
+          270,
+          769,
+          458,
+          890
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->C",
+        "gt": "0-107",
+        "pred": "C-107",
+        "iou": 0.6891252955082743,
+        "gt_bbox": [
+          557,
+          659,
+          645,
+          712
+        ],
+        "pred_bbox": [
+          556,
+          644,
+          650,
+          716
+        ]
+      }
+    ],
+    "test_0345.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "01",
+        "gt_bbox": [
+          0,
+          778,
+          193,
+          1000
+        ]
+      }
+    ],
+    "test_0346.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: K->k",
+        "gt": "K096",
+        "pred": "k096",
+        "iou": 0.8888807874589865,
+        "gt_bbox": [
+          636,
+          542,
+          808,
+          688
+        ],
+        "pred_bbox": [
+          625,
+          541,
+          803,
+          691
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "35",
+        "pred_bbox": [
+          354,
+          842,
+          615,
+          998
+        ]
+      }
+    ],
+    "test_0347.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->1",
+        "gt": "0-1118",
+        "pred": "1-1118",
+        "iou": 0.8387516254876463,
+        "gt_bbox": [
+          142,
+          727,
+          273,
+          767
+        ],
+        "pred_bbox": [
+          139,
+          723,
+          271,
+          769
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-1",
+        "pred_bbox": [
+          845,
+          849,
+          975,
+          906
+        ]
+      }
+    ],
+    "test_0348.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "C",
+        "pred_bbox": [
+          446,
+          412,
+          505,
+          565
+        ]
+      }
+    ],
+    "test_0349.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-11211",
+        "pred": "11211",
+        "iou": 0.8830227301803915,
+        "gt_bbox": [
+          458,
+          575,
+          703,
+          765
+        ],
+        "pred_bbox": [
+          456,
+          582,
+          696,
+          756
+        ]
+      }
+    ],
+    "test_0352.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 8->3",
+        "gt": "H048",
+        "pred": "H043",
+        "iou": 0.8442171518489379,
+        "gt_bbox": [
+          379,
+          584,
+          611,
+          695
+        ],
+        "pred_bbox": [
+          363,
+          578,
+          611,
+          701
+        ]
+      }
+    ],
+    "test_0354.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "5-77",
+        "gt_bbox": [
+          638,
+          694,
+          725,
+          749
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "5",
+        "pred_bbox": [
+          248,
+          154,
+          289,
+          334
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "5",
+        "pred_bbox": [
+          535,
+          403,
+          549,
+          441
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "5",
+        "pred_bbox": [
+          723,
+          395,
+          747,
+          462
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "5",
+        "pred_bbox": [
+          846,
+          416,
+          862,
+          460
+        ]
+      }
+    ],
+    "test_0355.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-1C135",
+        "pred_bbox": [
+          759,
+          345,
+          835,
+          394
+        ]
+      }
+    ],
+    "test_0359.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A227",
+        "pred_bbox": [
+          501,
+          614,
+          570,
+          660
+        ]
+      }
+    ],
+    "test_0364.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1019",
+        "pred_bbox": [
+          398,
+          272,
+          430,
+          315
+        ]
+      }
+    ],
+    "test_0365.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-1192",
+        "pred_bbox": [
+          943,
+          426,
+          995,
+          478
+        ]
+      }
+    ],
+    "test_0366.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0416",
+        "gt_bbox": [
+          57,
+          199,
+          90,
+          216
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0418",
+        "pred_bbox": [
+          44,
+          168,
+          103,
+          221
+        ]
+      }
+    ],
+    "test_0368.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1C61",
+        "pred": "1C61",
+        "iou": 0.9128039374127672,
+        "gt_bbox": [
+          687,
+          575,
+          913,
+          746
+        ],
+        "pred_bbox": [
+          682,
+          571,
+          905,
+          748
+        ]
+      }
+    ],
+    "test_0370.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "1555",
+        "gt_bbox": [
+          113,
+          210,
+          144,
+          239
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1555",
+        "pred_bbox": [
+          102,
+          188,
+          153,
+          256
+        ]
+      }
+    ],
+    "test_0372.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "2177",
+        "gt_bbox": [
+          517,
+          11,
+          540,
+          42
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2177",
+        "pred_bbox": [
+          492,
+          0,
+          549,
+          92
+        ]
+      }
+    ],
+    "test_0373.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "1132034",
+        "gt_bbox": [
+          355,
+          754,
+          556,
+          999
+        ]
+      }
+    ],
+    "test_0374.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "04",
+        "gt_bbox": [
+          783,
+          701,
+          978,
+          890
+        ]
+      }
+    ],
+    "test_0376.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: B->R",
+        "gt": "B246",
+        "pred": "R246",
+        "iou": 0.7279802581624905,
+        "gt_bbox": [
+          294,
+          766,
+          516,
+          902
+        ],
+        "pred_bbox": [
+          338,
+          758,
+          515,
+          896
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "25",
+        "pred_bbox": [
+          151,
+          483,
+          170,
+          516
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          731,
+          393,
+          766,
+          463
+        ]
+      }
+    ],
+    "test_0381.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失|多余字符",
+        "details": "缺失字符: 商业-; 多余字符: 临",
+        "gt": "商业-26",
+        "pred": "临26",
+        "iou": 0.8994858185437055,
+        "gt_bbox": [
+          458,
+          744,
+          866,
+          931
+        ],
+        "pred_bbox": [
+          448,
+          734,
+          864,
+          936
+        ]
+      }
+    ],
+    "test_0383.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2275",
+        "pred": "2275",
+        "iou": 0.7134831460674157,
+        "gt_bbox": [
+          274,
+          721,
+          401,
+          791
+        ],
+        "pred_bbox": [
+          264,
+          706,
+          404,
+          795
+        ]
+      }
+    ],
+    "test_0386.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "K1",
+        "pred_bbox": [
+          806,
+          372,
+          845,
+          497
+        ]
+      }
+    ],
+    "test_0388.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "1132011",
+        "gt_bbox": [
+          602,
+          589,
+          793,
+          726
+        ]
+      }
+    ],
+    "test_0391.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "F127",
+        "gt_bbox": [
+          194,
+          654,
+          427,
+          810
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "F121",
+        "pred_bbox": [
+          182,
+          468,
+          702,
+          859
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "F",
+        "pred_bbox": [
+          752,
+          109,
+          790,
+          188
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "3",
+        "pred_bbox": [
+          769,
+          198,
+          801,
+          243
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "E",
+        "pred_bbox": [
+          342,
+          186,
+          363,
+          223
+        ]
+      }
+    ],
+    "test_0392.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A",
+        "pred_bbox": [
+          0,
+          463,
+          21,
+          498
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A",
+        "pred_bbox": [
+          315,
+          446,
+          333,
+          477
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A",
+        "pred_bbox": [
+          369,
+          436,
+          390,
+          474
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A",
+        "pred_bbox": [
+          542,
+          392,
+          582,
+          470
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B2",
+        "pred_bbox": [
+          549,
+          489,
+          574,
+          520
+        ]
+      }
+    ],
+    "test_0396.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "多余字符",
+        "details": "多余字符: K",
+        "gt": "183",
+        "pred": "K183",
+        "iou": 0.8727088314134609,
+        "gt_bbox": [
+          164,
+          885,
+          491,
+          1000
+        ],
+        "pred_bbox": [
+          172,
+          873,
+          489,
+          999
+        ]
+      }
+    ],
+    "test_0409.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1C271",
+        "pred": "1C271",
+        "iou": 0.8690784409768386,
+        "gt_bbox": [
+          61,
+          590,
+          400,
+          820
+        ],
+        "pred_bbox": [
+          68,
+          572,
+          392,
+          826
+        ]
+      }
+    ],
+    "test_0410.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失|多余字符",
+        "details": "缺失字符: -; 多余字符: 3",
+        "gt": "2-5",
+        "pred": "253",
+        "iou": 0.9073310423825888,
+        "gt_bbox": [
+          528,
+          789,
+          617,
+          878
+        ],
+        "pred_bbox": [
+          526,
+          788,
+          623,
+          878
+        ]
+      }
+    ],
+    "test_0412.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 8->3",
+        "gt": "168",
+        "pred": "163",
+        "iou": 0.7614080834419817,
+        "gt_bbox": [
+          628,
+          570,
+          701,
+          618
+        ],
+        "pred_bbox": [
+          623,
+          562,
+          701,
+          621
+        ]
+      }
+    ],
+    "test_0416.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "-2898",
+        "gt_bbox": [
+          310,
+          704,
+          524,
+          799
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "-2897",
+        "gt_bbox": [
+          98,
+          638,
+          250,
+          712
+        ]
+      }
+    ],
+    "test_0418.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-15",
+        "pred_bbox": [
+          104,
+          850,
+          243,
+          999
+        ]
+      }
+    ],
+    "test_0419.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1289",
+        "pred": "1289",
+        "iou": 0.8397334300826825,
+        "gt_bbox": [
+          653,
+          591,
+          898,
+          804
+        ],
+        "pred_bbox": [
+          652,
+          600,
+          892,
+          784
+        ]
+      }
+    ],
+    "test_0420.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "多余字符",
+        "details": "多余字符: M",
+        "gt": "C-033",
+        "pred": "C-033M",
+        "iou": 0.7112068965517241,
+        "gt_bbox": [
+          371,
+          662,
+          605,
+          827
+        ],
+        "pred_bbox": [
+          358,
+          625,
+          619,
+          833
+        ]
+      }
+    ],
+    "test_0421.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2514",
+        "pred": "2514",
+        "iou": 0.8765170487382007,
+        "gt_bbox": [
+          622,
+          754,
+          781,
+          851
+        ],
+        "pred_bbox": [
+          623,
+          753,
+          773,
+          845
+        ]
+      }
+    ],
+    "test_0423.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1916",
+        "pred": "1916",
+        "iou": 0.8949903058352617,
+        "gt_bbox": [
+          88,
+          674,
+          353,
+          836
+        ],
+        "pred_bbox": [
+          85,
+          668,
+          356,
+          845
+        ]
+      }
+    ],
+    "test_0425.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 6->0",
+        "gt": "6-62",
+        "pred": "6-02",
+        "iou": 0.9245607146363012,
+        "gt_bbox": [
+          336,
+          664,
+          503,
+          786
+        ],
+        "pred_bbox": [
+          337,
+          669,
+          498,
+          786
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "6",
+        "pred_bbox": [
+          288,
+          264,
+          311,
+          346
+        ]
+      }
+    ],
+    "test_0426.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "9",
+        "pred_bbox": [
+          0,
+          600,
+          32,
+          679
+        ]
+      }
+    ],
+    "test_0427.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "152",
+        "gt_bbox": [
+          404,
+          725,
+          508,
+          791
+        ]
+      }
+    ],
+    "test_0428.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 8->3",
+        "gt": "B248",
+        "pred": "B243",
+        "iou": 0.6526398739164697,
+        "gt_bbox": [
+          314,
+          668,
+          478,
+          769
+        ],
+        "pred_bbox": [
+          300,
+          645,
+          480,
+          786
+        ]
+      }
+    ],
+    "test_0429.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2929",
+        "pred_bbox": [
+          487,
+          625,
+          552,
+          656
+        ]
+      }
+    ],
+    "test_0431.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "H109",
+        "gt_bbox": [
+          632,
+          675,
+          711,
+          728
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "H",
+        "pred_bbox": [
+          417,
+          273,
+          459,
+          376
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          432,
+          396,
+          457,
+          454
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "H109",
+        "pred_bbox": [
+          614,
+          606,
+          774,
+          758
+        ]
+      }
+    ],
+    "test_0432.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1588",
+        "pred": "1588",
+        "iou": 0.9161871360958834,
+        "gt_bbox": [
+          525,
+          569,
+          758,
+          804
+        ],
+        "pred_bbox": [
+          520,
+          561,
+          754,
+          808
+        ]
+      },
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1587",
+        "pred": "1587",
+        "iou": 0.7720588235294118,
+        "gt_bbox": [
+          355,
+          373,
+          450,
+          436
+        ],
+        "pred_bbox": [
+          348,
+          364,
+          450,
+          440
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1586",
+        "pred_bbox": [
+          295,
+          302,
+          365,
+          355
+        ]
+      }
+    ],
+    "test_0433.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1856",
+        "pred": "1856",
+        "iou": 0.9351149118118653,
+        "gt_bbox": [
+          179,
+          629,
+          432,
+          811
+        ],
+        "pred_bbox": [
+          182,
+          626,
+          425,
+          809
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "1855",
+        "gt_bbox": [
+          0,
+          481,
+          119,
+          587
+        ]
+      }
+    ],
+    "test_0434.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0",
+        "pred_bbox": [
+          21,
+          508,
+          95,
+          560
+        ]
+      }
+    ],
+    "test_0436.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2134",
+        "pred_bbox": [
+          614,
+          25,
+          670,
+          64
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2135",
+        "pred_bbox": [
+          889,
+          79,
+          920,
+          110
+        ]
+      }
+    ],
+    "test_0440.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "1-16",
+        "gt_bbox": [
+          419,
+          702,
+          629,
+          827
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "6",
+        "pred_bbox": [
+          559,
+          759,
+          622,
+          816
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "1",
+        "pred_bbox": [
+          826,
+          832,
+          978,
+          915
+        ]
+      }
+    ],
+    "test_0442.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          347,
+          258,
+          375,
+          370
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          70,
+          300,
+          90,
+          361
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2-062",
+        "pred_bbox": [
+          260,
+          80,
+          282,
+          128
+        ]
+      }
+    ],
+    "test_0444.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-031A",
+        "pred": "031A",
+        "iou": 0.8943396226415095,
+        "gt_bbox": [
+          468,
+          748,
+          733,
+          1000
+        ],
+        "pred_bbox": [
+          475,
+          761,
+          727,
+          998
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "C-05",
+        "pred_bbox": [
+          744,
+          602,
+          882,
+          723
+        ]
+      }
+    ],
+    "test_0445.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 0->U",
+        "gt": "0-1351",
+        "pred": "U-1351",
+        "iou": 0.6937095825984715,
+        "gt_bbox": [
+          342,
+          610,
+          442,
+          669
+        ],
+        "pred_bbox": [
+          338,
+          591,
+          443,
+          672
+        ]
+      }
+    ],
+    "test_0446.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1731",
+        "pred": "1731",
+        "iou": 0.9242479859353567,
+        "gt_bbox": [
+          432,
+          671,
+          703,
+          862
+        ],
+        "pred_bbox": [
+          438,
+          672,
+          698,
+          856
+        ]
+      }
+    ],
+    "test_0448.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "0759",
+        "gt_bbox": [
+          511,
+          618,
+          728,
+          671
+        ]
+      },
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "758",
+        "gt_bbox": [
+          0,
+          688,
+          259,
+          756
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0759",
+        "pred_bbox": [
+          503,
+          616,
+          601,
+          664
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "758",
+        "pred_bbox": [
+          289,
+          682,
+          400,
+          752
+        ]
+      }
+    ],
+    "test_0455.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "-1C47",
+        "pred_bbox": [
+          913,
+          494,
+          994,
+          588
+        ]
+      }
+    ],
+    "test_0456.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "A198",
+        "gt_bbox": [
+          324,
+          875,
+          378,
+          918
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "A198",
+        "pred_bbox": [
+          313,
+          858,
+          386,
+          922
+        ]
+      }
+    ],
+    "test_0457.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "17B",
+        "pred_bbox": [
+          548,
+          136,
+          568,
+          163
+        ]
+      }
+    ],
+    "test_0461.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "6",
+        "pred_bbox": [
+          503,
+          52,
+          579,
+          370
+        ]
+      }
+    ],
+    "test_0462.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "45",
+        "gt_bbox": [
+          453,
+          910,
+          536,
+          990
+        ]
+      }
+    ],
+    "test_0464.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "24026",
+        "gt_bbox": [
+          310,
+          662,
+          671,
+          733
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "240",
+        "pred_bbox": [
+          315,
+          663,
+          520,
+          721
+        ]
+      },
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "26",
+        "pred_bbox": [
+          526,
+          669,
+          666,
+          729
+        ]
+      }
+    ],
+    "test_0470.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-1C249",
+        "pred": "1C249",
+        "iou": 0.8700582421461348,
+        "gt_bbox": [
+          159,
+          680,
+          477,
+          882
+        ],
+        "pred_bbox": [
+          163,
+          668,
+          476,
+          869
+        ]
+      }
+    ],
+    "test_0472.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "G018",
+        "pred_bbox": [
+          248,
+          816,
+          424,
+          999
+        ]
+      }
+    ],
+    "test_0478.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失",
+        "details": "缺失字符: -",
+        "gt": "-2181",
+        "pred": "2181",
+        "iou": 0.8917861799217731,
+        "gt_bbox": [
+          642,
+          734,
+          804,
+          824
+        ],
+        "pred_bbox": [
+          643,
+          730,
+          795,
+          825
+        ]
+      }
+    ],
+    "test_0479.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "B",
+        "pred_bbox": [
+          475,
+          166,
+          527,
+          325
+        ]
+      }
+    ],
+    "test_0487.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "0-22",
+        "pred_bbox": [
+          794,
+          875,
+          998,
+          998
+        ]
+      }
+    ],
+    "test_0489.jpg": [
+      {
+        "type": "missing",
+        "error_type": "漏检",
+        "gt": "1657",
+        "gt_bbox": [
+          114,
+          701,
+          323,
+          810
+        ]
+      }
+    ],
+    "test_0492.jpg": [
+      {
+        "type": "hallucination",
+        "error_type": "无中生有",
+        "pred": "2",
+        "pred_bbox": [
+          642,
+          476,
+          659,
+          516
+        ]
+      }
+    ],
+    "test_0496.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "内容缺失|多余字符",
+        "details": "缺失字符: 商业-; 多余字符: 1",
+        "gt": "商业-68",
+        "pred": "168",
+        "iou": 0.8425624321389794,
+        "gt_bbox": [
+          104,
+          636,
+          365,
+          838
+        ],
+        "pred_bbox": [
+          118,
+          633,
+          350,
+          830
+        ]
+      }
+    ],
+    "test_0497.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "字符错检",
+        "details": "字符替换: 6->8",
+        "gt": "165",
+        "pred": "185",
+        "iou": 0.7999582811848144,
+        "gt_bbox": [
+          794,
+          798,
+          916,
+          936
+        ],
+        "pred_bbox": [
+          782,
+          792,
+          912,
+          928
+        ]
+      }
+    ],
+    "test_0498.jpg": [
+      {
+        "type": "text_error",
+        "error_type": "多余字符",
+        "details": "多余字符: 2A",
+        "gt": "0-2158",
+        "pred": "2A0-2158",
+        "iou": 0.8957370761049603,
+        "gt_bbox": [
+          0,
+          706,
+          138,
+          783
+        ],
+        "pred_bbox": [
+          1,
+          708,
+          140,
+          788
+        ]
+      }
+    ]
+  }
+}

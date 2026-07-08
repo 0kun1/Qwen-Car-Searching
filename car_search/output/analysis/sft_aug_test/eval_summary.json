@@ -1,0 +1,48 @@
+{
+  "iou_threshold": 0.5,
+  "basic": {
+    "total_images": 500,
+    "total_gt": 550,
+    "total_pred": 528,
+    "inference_error_images": 0,
+    "eval_error_images": 94
+  },
+  "empty_stats": {
+    "gt_empty_pred_empty": 98,
+    "gt_nonempty_pred_empty": 2,
+    "gt_empty_pred_nonempty": 3,
+    "gt_nonempty_pred_nonempty": 397
+  },
+  "bbox_match": {
+    "matched": 503,
+    "precision": 0.9526515151515151,
+    "recall": 0.9145454545454546,
+    "f1": 0.9332096474953618,
+    "avg_iou": 0.8740171343622857
+  },
+  "text_on_matched_bbox": {
+    "correct_text": 456,
+    "wrong_text": 47,
+    "accuracy_on_matched": 0.9065606361829026
+  },
+  "end_to_end": {
+    "tp": 456,
+    "fp": 72,
+    "fn": 94,
+    "precision": 0.8636363636363636,
+    "recall": 0.8290909090909091,
+    "f1": 0.8460111317254174
+  },
+  "error_type_counts": {
+    "漏检": 47,
+    "字符错检": 27,
+    "无中生有": 25,
+    "多余字符": 7,
+    "内容缺失": 5,
+    "字符错检|内容缺失|多余字符": 3,
+    "内容缺失|多余字符": 3,
+    "字符错检|多余字符": 1,
+    "字符错检|内容缺失": 1
+  },
+  "total_errors": 119
+}

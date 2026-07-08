@@ -1,0 +1,12 @@
+### model
+model_name_or_path: saves/qwen3-vl-sft-merged-aug-4090
+adapter_name_or_path: saves/qwen3-vl-dpo-lora-aug-4090
+template: qwen3_vl_nothink
+finetuning_type: lora
+trust_remote_code: true
+
+### export
+export_dir: saves/qwen3-vl-dpo-merged-aug-4090
+export_size: 5
+export_device: cpu
+export_legacy_format: false
